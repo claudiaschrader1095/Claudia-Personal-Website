@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+<rect width="1000" height="700" fill="#dff1df"/>
+<rect x="100" y="65" width="800" height="570" rx="45" fill="#fffdf8" stroke="#211a1b" stroke-width="7"/>
+<text x="500" y="155" text-anchor="middle" font-size="56" font-family="Georgia" font-weight="700" fill="#211a1b">Sydney's Sprout Haus</text>
+<text x="500" y="195" text-anchor="middle" font-size="16" font-family="Arial" letter-spacing="5" fill="#ef5f8d">PLANTS · POTS · GOOD ENERGY</text>
+<g transform="translate(385,230)">
+<path d="M115 195 C50 155 55 90 120 110 C105 45 175 35 180 100 C235 55 270 120 220 165 C190 190 155 205 115 195Z" fill="#8fcf9f" stroke="#211a1b" stroke-width="7"/>
+<path d="M120 105 C85 78 93 30 135 54 C142 10 190 22 183 66 C225 48 245 93 210 118" fill="#ffd966" stroke="#211a1b" stroke-width="7"/>
+<path d="M128 155 C125 220 125 270 130 320" fill="none" stroke="#211a1b" stroke-width="8"/>
+<path d="M55 310 h150 l-22 115 h-105z" fill="#ff8fb1" stroke="#211a1b" stroke-width="7"/>
+</g>
+<circle cx="205" cy="475" r="46" fill="#c9b8ff" stroke="#211a1b" stroke-width="5"/>
+<circle cx="800" cy="300" r="58" fill="#ffd966" stroke="#211a1b" stroke-width="5"/>
+<text x="500" y="590" text-anchor="middle" font-size="19" font-family="Arial" font-weight="700" fill="#211a1b">GROW SOMETHING BEAUTIFUL</text>
+</svg>

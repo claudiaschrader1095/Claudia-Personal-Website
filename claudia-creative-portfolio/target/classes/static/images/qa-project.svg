@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+<rect width="1000" height="700" fill="#c9b8ff"/>
+<rect x="80" y="65" width="840" height="570" rx="36" fill="#211a1b"/>
+<rect x="115" y="110" width="770" height="455" rx="24" fill="#fffdf8"/>
+<text x="150" y="175" font-size="25" font-family="Arial" font-weight="700" fill="#ef5f8d">QUALITY ENGINEERING</text>
+<text x="150" y="235" font-size="54" font-family="Georgia" font-weight="700" fill="#211a1b">Confidence before release.</text>
+<g transform="translate(150,300)">
+<rect width="250" height="155" rx="22" fill="#ffd966" stroke="#211a1b" stroke-width="5"/>
+<text x="28" y="52" font-size="18" font-family="Arial" font-weight="700">AUTOMATION</text>
+<text x="28" y="104" font-size="44" font-family="Georgia" font-weight="700">98%</text>
+<text x="28" y="132" font-size="14" font-family="Arial">critical path coverage</text>
+</g>
+<g transform="translate(440,300)">
+<rect width="290" height="155" rx="22" fill="#8fcf9f" stroke="#211a1b" stroke-width="5"/>
+<text x="28" y="52" font-size="18" font-family="Arial" font-weight="700">RELEASE HEALTH</text>
+<path d="M30 115 L80 84 L128 102 L180 55 L246 70" fill="none" stroke="#211a1b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<circle cx="792" cy="377" r="48" fill="#ff8fb1" stroke="#211a1b" stroke-width="5"/>
+<path d="M772 378 l15 15 29-37" fill="none" stroke="#211a1b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="525" font-size="18" font-family="Arial" fill="#211a1b">API TESTING · PLAYWRIGHT · STRATEGY · COLLABORATION</text>
+</svg>
