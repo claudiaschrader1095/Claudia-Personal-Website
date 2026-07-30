@@ -1,15 +1,15 @@
 :root {
-    --ink: #211a1b;
-    --cream: #fff8ee;
-    --paper: #fffdf8;
-    --pink: #ff8fb1;
-    --deep-pink: #ef5f8d;
-    --yellow: #ffd966;
-    --green: #8fcf9f;
-    --lavender: #c9b8ff;
+    --ink: #0f5858;
+    --cream: #f3e8d8;
+    --paper: #fbf8f6;
+    --pink: #1fa3a3; /* primary teal (used for brand/button) */
+    --deep-pink: #178e8e; /* darker teal for accents */
+    --yellow: #f3e6cf; /* warm sand/beige (used for fills) */
+    --green: #86b8a8;
+    --lavender: #e9f7f7; /* very light teal for soft backgrounds */
     --orange: #ff9b6a;
-    --line: rgba(33, 26, 27, 0.14);
-    --shadow: 0 20px 60px rgba(57, 32, 39, 0.13);
+    --line: rgba(15, 88, 88, 0.10);
+    --shadow: 0 20px 60px rgba(15, 88, 88, 0.08);
     --radius-lg: 40px;
     --radius-md: 24px;
     --radius-sm: 16px;
@@ -26,8 +26,8 @@ html {
 body {
     margin: 0;
     background:
-        radial-gradient(circle at 10% 10%, rgba(255, 217, 102, 0.25), transparent 22%),
-        radial-gradient(circle at 90% 20%, rgba(255, 143, 177, 0.18), transparent 25%),
+        radial-gradient(circle at 10% 10%, rgba(31, 163, 163, 0.14), transparent 22%),
+        radial-gradient(circle at 90% 20%, rgba(23, 142, 142, 0.10), transparent 25%),
         var(--cream);
     color: var(--ink);
     font-family: "DM Sans", sans-serif;
@@ -65,7 +65,7 @@ button {
     justify-content: space-between;
     position: relative;
     z-index: 20;
-    background: rgba(255, 253, 248, 0.82);
+    background: var(--pink);
     border: 1px solid var(--line);
     border-radius: 999px;
     backdrop-filter: blur(16px);
@@ -88,6 +88,54 @@ button {
     border: 1px solid var(--ink);
     box-shadow: 3px 3px 0 var(--ink);
     font-family: "Fraunces", serif;
+}
+
+/* When an image logo is present */
+.brand-mark.has-img {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.brand-mark.has-img img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+/* Ensure logo scales on small screens */
+@media (max-width: 720px) {
+    .brand-mark.has-img img {
+        width: 120px;
+    }
+}
+
+/* Header color adjustments for contrast */
+.site-header,
+.site-header .brand,
+.site-header .site-nav {
+    color: white;
+}
+
+.site-header a,
+.site-header .brand > span {
+    color: white;
+}
+
+.site-nav a:not(.nav-cta)::after {
+    background: rgba(255,255,255,0.18);
+}
+
+.nav-cta {
+    padding: 11px 18px;
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--deep-pink);
 }
 
 .site-nav {
@@ -396,7 +444,7 @@ button {
     display: block;
     position: relative;
     overflow: hidden;
-    background: #f6ece3;
+    background: var(--white);
 }
 
 .project-card.featured:first-child .project-image {
@@ -406,7 +454,8 @@ button {
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     transition: transform 0.55s ease;
 }
 
@@ -492,6 +541,7 @@ button {
 .portrait-copy span,
 .portrait-copy strong {
     display: block;
+    align-items: center;
 }
 
 .portrait-copy strong {
@@ -624,7 +674,9 @@ footer {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    border-top: 1px solid var(--line);
+    background: var(--deep-pink);
+    color: white;
+    border-top: 0;
     font-size: 0.9rem;
 }
 

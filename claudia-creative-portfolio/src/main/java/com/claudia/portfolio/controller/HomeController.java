@@ -17,7 +17,7 @@ public class HomeController {
                         "Dough House Donuts",
                         "Web Design + Development",
                         "A playful, community-centered website concept for a vegan donut shop, inspired by nostalgic neighborhood bakeries and bold neon branding.",
-                        "/images/donut-project.svg",
+                        "/images/donut-project.png",
                         "#contact",
                         "Java · Spring Boot · HTML · CSS",
                         true
