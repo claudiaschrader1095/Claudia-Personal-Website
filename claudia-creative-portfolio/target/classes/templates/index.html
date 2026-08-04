@@ -81,32 +81,22 @@
 
             <div class="project-grid">
                 <article class="project-card reveal" th:each="project : ${projects}" th:classappend="${project.featured} ? ' featured' : ''">
-                    <a th:href="${project.link}" class="project-image">
-                        <img th:src="${project.image}" th:alt="${project.title}">
-                        <span class="project-arrow" aria-hidden="true">↗</span>
-                    </a>
                     <div class="project-content">
                         <p class="project-category" th:text="${project.category}">Category</p>
                         <h3 th:text="${project.title}">Project title</h3>
                         <p th:text="${project.description}">Project description</p>
                         <span class="project-tech" th:text="${project.technology}">Technology</span>
                     </div>
+                    <a th:href="${project.link}" class="project-image">
+                        <video th:if="${project.image.endsWith('.mov')}" th:src="${project.image}" autoplay muted loop playsinline></video>
+                        <img th:unless="${project.image.endsWith('.mov')}" th:src="${project.image}" th:alt="${project.title}">
+                        <span class="project-arrow" aria-hidden="true">↗</span>
+                    </a>
                 </article>
             </div>
         </section>
 
         <section id="about" class="section about-section">
-            <div class="about-visual reveal">
-                <div class="portrait-placeholder">
-                    <div class="portrait-copy">
-                        <span>Based in</span>
-                        <strong>Charleston, SC</strong>
-                    </div>
-                </div>
-                <div class="sticker sticker-one">plant-powered 🌱</div>
-                <div class="sticker sticker-two">detail obsessed</div>
-            </div>
-
             <div class="about-copy reveal">
                 <p class="eyebrow">Behind the work</p>
                 <h2>I believe the best ideas live where logic and imagination meet.</h2>
@@ -156,8 +146,7 @@
             </div>
         </section>
 
-        <section class="quote-section section reveal">
-            <div class="quote-mark">“</div>
+        <section class="quote-section section reveal"> 
             <blockquote>
                 I care about how things work, but I care just as much about how they make people feel.
             </blockquote>
