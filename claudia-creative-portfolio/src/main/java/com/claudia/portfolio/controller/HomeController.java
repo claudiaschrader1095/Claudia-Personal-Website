@@ -23,19 +23,10 @@ public class HomeController {
                         true
                 ),
                 new Project(
-                        "QA Experience Hub",
-                        "Quality Engineering",
-                        "A polished case-study concept showcasing test strategy, backend validation, automation, cross-team planning, and product launch support.",
-                        "/images/qa-project.svg",
-                        "#contact",
-                        "Playwright · Java · API Testing",
-                        true
-                ),
-                new Project(
                         "Plant-Based Supper Club",
                         "Brand + Experience Design",
                         "A whimsical luxury dining concept combining plant-based cuisine, immersive tablescapes, pastel color, and editorial storytelling.",
-                        "/images/supper-club-project.svg",
+                        "/images/supper-club.mov",
                         "#contact",
                         "Creative Direction · Branding · UX",
                         true

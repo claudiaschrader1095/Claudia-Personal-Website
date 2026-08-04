@@ -1,12 +1,12 @@
 :root {
     --ink: #0f5858;
-    --cream: #f3e8d8;
-    --paper: #fbf8f6;
-    --pink: #1fa3a3; /* primary teal (used for brand/button) */
-    --deep-pink: #178e8e; /* darker teal for accents */
-    --yellow: #f3e6cf; /* warm sand/beige (used for fills) */
-    --green: #86b8a8;
-    --lavender: #e9f7f7; /* very light teal for soft backgrounds */
+    --cream: #F0DFC8;
+    --paper: #ffffff;
+    --pink: #51ABB2; /* primary teal */
+    --deep-pink: #3A8A91; /* darker teal for accents */
+    --yellow: #E1DAC6; /* warm sand */
+    --green: #96C2BB; /* sage */
+    --lavender: #EDF7F6; /* soft warm teal for backgrounds */
     --orange: #ff9b6a;
     --line: rgba(15, 88, 88, 0.10);
     --shadow: 0 20px 60px rgba(15, 88, 88, 0.08);
@@ -26,9 +26,9 @@ html {
 body {
     margin: 0;
     background:
-        radial-gradient(circle at 10% 10%, rgba(31, 163, 163, 0.14), transparent 22%),
-        radial-gradient(circle at 90% 20%, rgba(23, 142, 142, 0.10), transparent 25%),
-        var(--cream);
+        radial-gradient(circle at 10% 10%, rgba(81, 171, 178, 0.08), transparent 22%),
+        radial-gradient(circle at 90% 20%, rgba(225, 218, 198, 0.35), transparent 25%),
+        #FAF7F2;
     color: var(--ink);
     font-family: "DM Sans", sans-serif;
     line-height: 1.6;
@@ -59,16 +59,16 @@ button {
 .site-header {
     width: min(1180px, calc(100% - 40px));
     margin: 18px auto 0;
-    padding: 14px 16px 14px 20px;
+    padding: 16px 22px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     z-index: 20;
-    background: var(--pink);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    backdrop-filter: blur(16px);
+    background: #F0DFC8;
+    border: 1px solid rgba(15, 88, 88, 0.18);
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(15, 88, 88, 0.07);
 }
 
 .brand {
@@ -119,23 +119,16 @@ button {
 .site-header,
 .site-header .brand,
 .site-header .site-nav {
-    color: white;
+    color: var(--ink);
 }
 
-.site-header a,
+.site-header a:not(.nav-cta),
 .site-header .brand > span {
-    color: white;
+    color: var(--ink);
 }
 
 .site-nav a:not(.nav-cta)::after {
-    background: rgba(255,255,255,0.18);
-}
-
-.nav-cta {
-    padding: 11px 18px;
-    border-radius: 999px;
-    background: var(--paper);
-    color: var(--deep-pink);
+    background: rgba(15, 88, 88, 0.18);
 }
 
 .site-nav {
@@ -172,7 +165,7 @@ button {
     padding: 11px 18px;
     border-radius: 999px;
     background: var(--ink);
-    color: white;
+    color: #ffffff;
 }
 
 .menu-toggle {
@@ -295,7 +288,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: var(--lavender);
+    background: var(--yellow);
     border-radius: 48% 52% 42% 58% / 42% 42% 58% 58%;
     transform: rotate(-3deg);
 }
@@ -433,10 +426,14 @@ button {
     box-shadow: 0 10px 30px rgba(57, 32, 39, 0.06);
 }
 
-.project-card.featured:first-child {
+/* all featured cards span the full grid width */
+.project-card.featured {
     grid-column: span 2;
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+}
+
+.project-card.featured:first-child {
+    display: flex;
+    flex-direction: column;
 }
 
 .project-image {
@@ -451,12 +448,25 @@ button {
     min-height: 470px;
 }
 
+/* tall image area for the stacked supper club card */
+.project-card.featured:last-child .project-image {
+    min-height: 620px;
+}
+
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center;
     transition: transform 0.55s ease;
+}
+
+.project-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .project-card:hover .project-image img {
@@ -503,10 +513,9 @@ button {
 }
 
 .about-section {
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    align-items: center;
-    gap: 100px;
+    max-width: 860px;
+    margin: 0 auto;
+    padding-top: 70px;
 }
 
 .about-visual {
@@ -638,9 +647,9 @@ blockquote {
     border: 2px solid var(--ink);
     border-radius: var(--radius-lg);
     background:
-        radial-gradient(circle at 85% 15%, var(--yellow) 0 9%, transparent 9.5%),
+        radial-gradient(circle at 85% 15%, var(--pink) 0 9%, transparent 9.5%),
         radial-gradient(circle at 93% 68%, var(--green) 0 14%, transparent 14.5%),
-        var(--lavender);
+        var(--cream);
     box-shadow: 12px 12px 0 var(--ink);
 }
 
@@ -668,16 +677,31 @@ code {
 
 footer {
     width: min(1180px, calc(100% - 40px));
-    margin: 0 auto;
-    padding: 34px 0 48px;
+    margin: 26px auto 28px;
+    padding: 22px 26px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 24px;
-    background: var(--deep-pink);
-    color: white;
-    border-top: 0;
+    background: #F0DFC8;
+    color: var(--ink);
+    border: 1px solid rgba(15, 88, 88, 0.18);
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(15, 88, 88, 0.07);
     font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .brand {
+    gap: 14px;
+}
+
+footer .brand-mark.has-img img {
+    width: 150px;
 }
 
 .reveal {
@@ -710,17 +734,14 @@ footer {
         gap: 20px;
     }
 
-    .project-card.featured:first-child {
-        display: block;
+    .project-card.featured:last-child .project-image {
+        min-height: 400px;
     }
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .about-visual {
-        max-width: 600px;
-    }
 }
 
 @media (max-width: 720px) {
@@ -808,21 +829,10 @@ footer {
     }
 
     .project-image,
-    .project-card.featured:first-child .project-image {
+    .project-card.featured:first-child .project-image,
+    .project-card.featured:last-child .project-image {
         min-height: 300px;
     }
-
-    .about-section {
-        gap: 55px;
-    }
-
-    .about-visual,
-    .portrait-placeholder {
-        min-height: 480px;
-    }
-
-    .sticker-one { right: -5px; }
-    .sticker-two { left: -5px; }
 
     .skills-grid {
         grid-template-columns: 1fr;
@@ -842,8 +852,18 @@ footer {
 
     footer {
         width: calc(100% - 28px);
+        padding: 18px 18px 20px;
         flex-direction: column;
+        align-items: flex-start;
         text-align: center;
+    }
+
+    footer .brand {
+        align-self: center;
+    }
+
+    footer .brand-mark.has-img img {
+        width: 130px;
     }
 }
 
