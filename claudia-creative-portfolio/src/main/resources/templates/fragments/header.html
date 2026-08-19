@@ -1,0 +1,18 @@
+<header class="site-header" th:fragment="site-header">
+    <a class="brand" th:href="@{/}" aria-label="Claudia home">
+        <span class="brand-mark has-img">
+            <img th:src="@{/images/logo-image.png}" src="/images/logo-image.png" alt="Cultivated by Claudia logo">
+        </span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a th:href="@{/work}">Work</a>
+        <a th:href="@{/about}">About</a>
+        <a th:href="@{/about#skills}">Skills</a>
+        <a class="nav-cta" th:href="@{/contact}">Let’s connect</a>
+    </nav>
+</header>
