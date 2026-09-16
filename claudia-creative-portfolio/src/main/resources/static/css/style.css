@@ -479,20 +479,6 @@ button {
     transform: scale(1.04);
 }
 
-.project-arrow {
-    width: 52px;
-    height: 52px;
-    display: grid;
-    place-items: center;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    border: 1px solid var(--ink);
-    border-radius: 50%;
-    background: var(--paper);
-    font-size: 1.35rem;
-}
-
 .project-content {
     padding: 30px;
 }
