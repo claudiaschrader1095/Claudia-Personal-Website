@@ -46,7 +46,7 @@ public class HomeController {
                                                 "Plant-Based Supper Club",
                                                 "Brand + Experience Design",
                                                 "A whimsical luxury dining concept combining plant-based cuisine, immersive tablescapes, pastel color, and editorial storytelling.",
-                                                "/images/supper-club.mov",
+                                                "/images/supper-club.mp4",
                                                 "#contact",
                                                 "Creative Direction · Branding · UX",
                                                 true

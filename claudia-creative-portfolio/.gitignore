@@ -1,9 +1,5 @@
 # Build output
 target/
 
-# Large media files that should stay local only
-*.mov
-*.mp4
-*.m4v
-*.avi
-*.mkv
+# Keep website media tracked so it deploys with the app.
+# If you intentionally want to ignore large files, add them here explicitly.
