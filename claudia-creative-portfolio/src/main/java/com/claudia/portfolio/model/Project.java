@@ -5,6 +5,7 @@ public record Project(
         String category,
         String description,
         String image,
+        String poster,
         String link,
         String technology,
         boolean featured

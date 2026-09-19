@@ -32,7 +32,9 @@
                         <span class="project-tech" th:text="${project.technology}">Technology</span>
                     </div>
                     <a th:href="${project.link}" class="project-image">
-                        <video th:if="${#strings.toLowerCase(project.image).endsWith('.mov') or #strings.toLowerCase(project.image).endsWith('.mp4')}" autoplay muted loop playsinline preload="metadata">
+                        <video th:if="${#strings.toLowerCase(project.image).endsWith('.mov') or #strings.toLowerCase(project.image).endsWith('.mp4')}"
+                               th:poster="${project.poster}"
+                               autoplay muted loop playsinline preload="metadata">
                             <source th:src="${project.image}" th:type="${#strings.toLowerCase(project.image).endsWith('.mp4') ? 'video/mp4' : 'video/quicktime'}">
                         </video>
                         <img th:unless="${#strings.toLowerCase(project.image).endsWith('.mov') or #strings.toLowerCase(project.image).endsWith('.mp4')}" th:src="${project.image}" th:alt="${project.title}">

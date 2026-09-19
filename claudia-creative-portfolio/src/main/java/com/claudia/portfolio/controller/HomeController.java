@@ -37,6 +37,7 @@ public class HomeController {
                                                 "Dough House Donuts",
                                                 "Web Design + Development",
                                                 "A playful, community-centered website concept for a vegan donut shop, inspired by nostalgic neighborhood bakeries and bold neon branding.",
+                                                "/images/dough-house-donuts.mp4",
                                                 "/images/donut-project.png",
                                                 "#contact",
                                                 "Java · Spring Boot · HTML · CSS",
@@ -47,6 +48,7 @@ public class HomeController {
                                                 "Brand + Experience Design",
                                                 "A whimsical luxury dining concept combining plant-based cuisine, immersive tablescapes, pastel color, and editorial storytelling.",
                                                 "/images/supper-club.mp4",
+                                                "/images/supper-club-project.svg",
                                                 "#contact",
                                                 "Creative Direction · Branding · UX",
                                                 true
